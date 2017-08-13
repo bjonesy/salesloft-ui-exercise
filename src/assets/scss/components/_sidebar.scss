@@ -1,0 +1,98 @@
+/*--------------------------------------------------------------
+## Sidebar
+--------------------------------------------------------------*/
+
+.mdc-persistent-drawer {
+
+  #trash {
+    #trash-number {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
+  #favorite {
+    #favorite-number {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
+  #inbox {
+    #inbox-number {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
+  #spam {
+    #spam-number {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
+  #all-mail {
+    #all-number {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
+  .mdc-persistent-drawer--selected.mdc-list-item,
+  .mdc-persistent-drawer--selected.mdc-list-item .mdc-list-item__start-detail {
+    color: #dd4b39;
+  }
+
+  .mdc-tag-title {
+    position: relative;
+    padding: 0 16px;
+    outline: none;
+    color: inherit;
+    display: flex;
+    text-decoration: none;
+    webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    height: 48px;
+    font-family: Roboto,sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-size: .875rem;
+    font-weight: 500;
+    margin-left: 55px;
+    letter-spacing: .04em;
+    line-height: 1.5rem;
+    text-decoration: inherit;
+    text-transform: inherit;
+  }
+
+  .mdc-tag {
+    color: #dd4b39;
+    position: relative;
+    padding: 0 16px;
+    outline: none;
+    display: flex;
+    text-decoration: none;
+    webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    height: 25px;
+    font-family: Roboto,sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-size: .875rem;
+    font-weight: 700;
+    margin-left: 55px;
+    letter-spacing: .04em;
+    line-height: 1.5rem;
+    text-decoration: inherit;
+    text-transform: inherit;
+  }
+}

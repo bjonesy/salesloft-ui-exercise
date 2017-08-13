@@ -1,0 +1,74 @@
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+
+.mdc-toolbar {
+  background: #f1f1f1;
+
+  &__icon--menu {
+    color: rgba(0,0,0,.55);
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  .mdc-button--primary.toggle {
+    background-color: #dd4b39;
+    box-shadow: none;
+    margin-top: 10px;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  .mdc-toolbar__icon.layout-toggle {
+    margin-left: 40px;
+
+    @media (max-width: 600px) {
+      margin-left: 0px;
+      margin-right: 15px;
+    }
+  }
+
+  &__title {
+    color: #dd4b39;
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: middle;
+
+    a {
+      color: #dd4b39;
+      text-decoration: none;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  &__icon {
+    color: rgba(0,0,0,.55);
+    &:hover {
+      color: #000;
+    }
+  }
+
+  &__menu-icon {
+    vertical-align: middle;
+  }
+
+  #delete-all,
+  #delete-read,
+  #save-all,
+  #save-read,
+  #spam-all,
+  #spam-read {
+    display: none;
+
+    &.show {
+      display: inline-block;
+    }
+  }
+}

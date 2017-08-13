@@ -1,0 +1,208 @@
+/*--------------------------------------------------------------
+## Emails List
+--------------------------------------------------------------*/
+
+#emails-list {
+  li {
+    cursor: pointer;
+
+    &.read {
+      background: #f6f6f6;
+    }
+
+    &.simple {
+      .mdc-list-item {
+
+        &__text__secondary {
+          &.preview {
+            p {
+              display: none;
+            }
+          }
+
+          &.hidden {
+            display: none;
+          }
+        }
+
+        &__end-detail {
+          display: none;
+        }
+      }
+    }
+
+    &.text-larger {
+      .mdc-list-item {
+        &__text {
+          font-size: 1.2rem;
+          p {
+            font-size: 1.1rem;
+          }
+        }
+
+        &__text__secondary {
+          &.preview {
+            font-size: 1.1rem;
+          }
+
+          &.hidden {
+            font-size: 1.1rem;
+          }
+        }
+
+
+        &__sender {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    &.expand {
+      height: auto;
+      margin-bottom: 20px;
+      padding: 16px;
+
+      .mdc-list-item {
+        &__text__secondary {
+          &.preview {
+            display: none;
+          }
+
+          &.hidden {
+            display: block;
+            line-height: 1.7;
+          }
+        }
+      }
+    }
+
+    &.higher {
+      height: auto;
+    }
+
+    &.selected {
+      background: #bbb;
+      height: auto;
+      margin-bottom: 20px;
+      padding: 16px;
+
+      .mdc-checkbox__label {
+
+        &:after {
+          opacity: 1;
+          content: '';
+          position: absolute;
+          width: 9px;
+          height: 5px;
+          background: transparent;
+          top: 14px;
+          left: 14px;
+          border: 3px solid #fff;
+          border-top: none;
+          border-right: none;
+          transform: rotate(-45deg);
+          z-index: 2;
+        }
+      }
+
+      .mdc-checkbox__background {
+        background: #dd4b39;
+        border-color: #dd4b39;
+      }
+
+      .mdc-list-item {
+
+        &__text__secondary {
+          &.preview {
+            display: none;
+          }
+
+          &.hidden {
+            color: rgba(0,0,0,.87);;
+            display: block;
+            line-height: 1.7;
+          }
+        }
+
+        @media (max-width: 800px) {
+          &__end-detail {
+            font-size: 0.8rem;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+          }
+        }
+      }
+
+      @media (max-width: 800px) {
+        padding-top: 50px;
+      }
+    }
+
+    &:hover {
+      background: #eee;
+
+      &.selected {
+        background: #bbb;
+      }
+    }
+
+    @media (max-width: 800px) {
+      height: auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  .mdc-list-item {
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    height: 92px;
+
+    &__text {
+      p {
+        margin: 0;
+      }
+    }
+
+    &__sender {
+      color: #000;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-right: 20px;
+    }
+
+    &__end-detail {
+      height: auto;
+      width: auto;
+
+      @media (max-width: 1000px) {
+        font-size: 0.8rem;
+      }
+
+      @media (max-width: 800px) {
+        height: auto;
+        line-height: 1.5;
+      }
+    }
+
+    &__text__secondary {
+      &.preview {
+        display: block;
+      }
+
+      &.hidden {
+        display: none;
+      }
+    }
+
+    @media (max-width: 800px) {
+      height: auto;
+    }
+  }
+}
