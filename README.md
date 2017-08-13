@@ -13,6 +13,14 @@ A fluid & responsive page layout using HTML, SCSS, and JS that is based on the G
 - `npm start`
 - Visit [http://localhost:3000/](http://localhost:3000/)
 
+## Instructions
+
+- [Emails](#emails)
+- [Toggle Menu](#toggle-menu)
+- [Email list view toggle](#email-list-view-toggle)
+- [Toolbar Email Functions](#toolbar-email-functions)
+- [Sidebar Menu](#sidebar-menu)
+
 ## Emails
 
 Click each email to expand the view to read the full text of the email.
