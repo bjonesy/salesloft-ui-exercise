@@ -15,10 +15,10 @@ export function spamEmail() {
     $('.mdc-list-item-email.spam').removeClass('normal');
     $('.mdc-list-item-email.spam').removeClass('read');
     let allcount = $('.mdc-list-item-email.normal').length;
-    let inboxcount = $('.mdc-list-item-email.read').length;
+    let inboxcount = $('.mdc-list-item-email.normal.unread').length;
     let count = $('.mdc-list-item.spam').length;
     $('#spam-number').html(count);
-    $('#inbox-number').html(inboxcount + allcount);
+    $('#inbox-number').html(inboxcount);
     $('#all-number').html(allcount);
     if ($('#all-number').html() < 0) {
       count = 0;
@@ -38,10 +38,10 @@ export function spamEmail() {
     $('.mdc-list-item-email.spam').removeClass('normal');
     $('.mdc-list-item-email.spam').removeClass('read');
     let allcount = $('.mdc-list-item-email.normal').length;
-    let inboxcount = $('.mdc-list-item-email.read').length;
+    let inboxcount = $('.mdc-list-item-email.normal.unread').length;
     let spamcount = $('.mdc-list-item-email.spam').length;
     $('#spam-number').html(spamcount);
-    $('#inbox-number').html(inboxcount + allcount);
+    $('#inbox-number').html(inboxcount);
     $('#all-number').html(allcount);
     if ($('#all-number').html() < 0) {
       count  = 0;
@@ -62,10 +62,10 @@ export function spamEmail() {
     $('.mdc-list-item-email.spam').removeClass('normal');
     $('.mdc-list-item-email.spam').removeClass('read');
     let allcount = $('.mdc-list-item-email.normal').length;
-    let inboxcount = $('.mdc-list-item-email.read').length;
+    let inboxcount = $('.mdc-list-item-email.normal.unread').length;
     let spamcount = $('.mdc-list-item-email.spam').length;
     $('#spam-number').html(spamcount);
-    $('#inbox-number').html(inboxcount + allcount);
+    $('#inbox-number').html(inboxcount);
     $('#all-number').html(allcount);
     if ($('#all-number').html() < 0) {
       allcount  = 0;

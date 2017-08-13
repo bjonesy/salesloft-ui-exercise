@@ -11,6 +11,7 @@ export function emailListChange() {
     $(this).removeClass('selected');
     if (!$(this).hasClass('selected')) {
       $(this).addClass('selected');
+      $(this).removeClass('unread');
       $(this).find('input').addClass('selected');
       $(this).find('input').prop('checked', true);
       if (!$(this).hasClass('read')) {

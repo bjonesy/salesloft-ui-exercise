@@ -32,10 +32,10 @@ export function removeEmail() {
     $('.mdc-list-item-email.deleted').removeClass('normal');
     $('.mdc-list-item-email.deleted').removeClass('read');
     let allcount = $('.mdc-list-item-email.normal').length;
-    let inboxcount = $('.mdc-list-item-email.read').length;
+    let inboxcount = $('.mdc-list-item-email.normal.unread').length;
     let trashcount = $('.mdc-list-item-email.deleted').length;
     $('#trash-number').html(trashcount);
-    $('#inbox-number').html(inboxcount + allcount);
+    $('#inbox-number').html(inboxcount);
     $('#all-number').html(allcount);
     if ($('#all-number').html() < 0) {
       count  = 0;
@@ -56,10 +56,10 @@ export function removeEmail() {
     $('.mdc-list-item-email.deleted').removeClass('normal');
     $('.mdc-list-item-email.deleted').removeClass('read');
     let allcount = $('.mdc-list-item-email.normal').length;
-    let inboxcount = $('.mdc-list-item-email.read').length;
+    let inboxcount = $('.mdc-list-item-email.normal.unread').length;
     let trashcount = $('.mdc-list-item-email.deleted').length;
     $('#trash-number').html(trashcount);
-    $('#inbox-number').html(inboxcount + allcount);
+    $('#inbox-number').html(inboxcount);
     $('#all-number').html(allcount);
     if ($('#all-number').html() < 0) {
       allcount  = 0;

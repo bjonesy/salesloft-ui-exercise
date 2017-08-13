@@ -24,7 +24,7 @@ class Email {
     const list_end = document.createElement('span');
 
     // Add classes to the list item
-    list_item.classList.add('mdc-list-item-email', 'mdc-list-item', 'mdc-ripple-upgraded', 'normal');
+    list_item.classList.add('mdc-list-item-email', 'mdc-list-item', 'mdc-ripple-upgraded', 'normal', 'unread');
     // Add a class to the list item text container
     list_text.classList.add('mdc-list-item__text');
     // Add a class to the list item subject container
