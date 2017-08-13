@@ -1,6 +1,5 @@
 import '../scss/index.scss';
 const menu = document.getElementById('emails-list');
-var MDCCheckbox = global.mdc.checkbox.MDCCheckbox;
 const axios = require('axios');
 const $ = require('jquery');
 
