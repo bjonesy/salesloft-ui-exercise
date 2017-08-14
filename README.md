@@ -93,7 +93,7 @@ When an email is selected pressing the chat bubble with the exclamation mark ico
 
 <img src="http://www.brandonsj.me/wp-content/uploads/2017/08/Screen-Shot-2017-08-13-at-5.35.15-PM.png" width="850">
 
-By clicking the menu icon the sidebar menu will move into display.  Clicking each tab will display the emails that are either in the inbox, favorite list, 
+By clicking the menu icon the sidebar menu will move into display.  Clicking each tab will display the tab contents.
 
 ### Inbox 
 
