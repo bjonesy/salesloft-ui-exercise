@@ -59,15 +59,15 @@ Deselect all selected emails.
 
 ### Increase Text
 
-Increase the test of the emails.
+Toggle the text size of the emails.
 
 ### Expand View
 
-Expand the default view of the emails to display the full message.
+Toggle the default view of the emails to display the full message.
 
 ### Simple View
 
-Display a minimal view of the email list.
+Toggle a minimal view of the email list.
 
 ## Toolbar Email Functions
 
