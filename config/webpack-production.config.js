@@ -4,7 +4,7 @@ const devConfig = require('./webpack.config.js');
 const config = Object.assign({}, devConfig, {
   entry: {
     main: [
-      path.join(__dirname, '/../src/assets/js/main.js')
+      path.join(__dirname, '/../src/assets/js/index.js')
     ]
   },
 });

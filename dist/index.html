@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Salesloft UI Excercise</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body>
+        <aside class="mdc-persistent-drawer">
+            <nav class="mdc-persistent-drawer__drawer">
+                <div class="mdc-persistent-drawer__toolbar-spacer"></div>
+                <div class="mdc-list-group">
+                    <nav id="sidebar-list-one" class="mdc-list">
+                        <a id="inbox" class="mdc-list-item mdc-persistent-drawer--selected" href="#" data-mdc-tabindex-handled="true" tabindex="-1">
+                            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">inbox</i>Inbox
+                            <span id="inbox-number"></span>
+                        </a>
+                        <a id="favorite" class="mdc-list-item" href="#" data-mdc-tabindex-handled="true" tabindex="-1">
+                            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">star</i>Star
+                            <span id="favorite-number"></span>
+                        </a>
+                        <a class="mdc-list-item" href="#" data-mdc-tabindex-handled="true" tabindex="-1">
+                            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">send</i>Sent Mail
+                        </a>
+                        <a class="mdc-list-item" href="#" data-mdc-tabindex-handled="true" tabindex="-1">
+                            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">drafts</i>Drafts
+                        </a>
+                    </nav>
+
+                    <hr class="mdc-list-divider">
+
+                    <nav id="sidebar-list-two" class="mdc-list">
+                        <a id="all-mail" class="mdc-list-item" href="#" data-mdc-tabindex-handled="true" tabindex="-1">
+                            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">email</i>All Mail
+                            <span id="all-number"></span>
+                        </a>
+                        <a id="trash" class="mdc-list-item" href="#" data-mdc-tabindex-handled="true" tabindex="-1">
+                            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">delete</i>Trash
+                            <span id="trash-number"></span>
+                        </a>
+                        <a id="spam" class="mdc-list-item" href="#" data-mdc-tabindex-handled="true" tabindex="-1">
+                            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">report</i>Spam
+                            <span id="spam-number"></span>
+                        </a>
+                    </nav>
+                </div>
+                <div id="mdc-tags">
+                    <span class="mdc-tag-title">Tags</span>
+                </div>
+            </nav>
+        </aside>
+        <div class="content-container">
+            <header class="mdc-toolbar mdc-toolbar--fixed">
+                <div class="mdc-toolbar__row">
+                    <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                            <button class="demo-menu material-icons mdc-toolbar__icon--menu">menu</button>
+                            <span class="mdc-toolbar__title catalog-title"><a href="/">Google Mail</a></span>
+                            <div class="mdc-menu-anchor">
+                                <a class="material-icons mdc-toolbar__icon layout-toggle">view_list
+                                </a><!-- mdc-button mdc-button--raised -->
+
+                                <div class="mdc-simple-menu" style="position: absolute; transform-origin: left top 0px; left: 0px; top: 0px; transform: scale(0, 0);" tabindex="-1" id="layout-menu">
+                                    <ul class="mdc-simple-menu__items mdc-list" role="menu" aria-hidden="true" style="transform: scale(1, 1);">
+                                        <li id="email-textfull" class="mdc-list-item" role="menuitem" tabindex="0">Increase Text</li>
+                                        <li class="mdc-list-divider" role="separator"></li>
+                                        <li id="email-layout" class="mdc-list-item" role="menuitem" tabindex="1">Expand View</li>
+                                        <li class="mdc-list-divider" role="separator"></li>
+                                        <li id="email-simple" class="mdc-list-item" role="menuitem" tabindex="2">Simple View</li>
+                                    </ul><!-- mdc-simple-menu__items -->
+                                </div>
+                            </div><!-- mdc-menu-anchor -->
+                        </section><!-- mdc-toolbar__section mdc-toolbar__section--align-start -->
+                    </section><!-- mdc-toolbar__section mdc-toolbar__section--align-start -->
+                    <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+                        <div class="mdc-menu-anchor">
+                            <button class="mdc-button mdc-button--raised mdc-button--primary toggle">
+                                Toggle Menu
+                            </button><!-- mdc-button mdc-button--raised -->
+
+                            <div class="mdc-simple-menu" style="position: absolute; transform-origin: left top 0px; left: 0px; top: 0px; transform: scale(0, 0);" tabindex="-1" id="toolbar-menu">
+                                <ul class="mdc-simple-menu__items mdc-list" role="menu" aria-hidden="true" style="transform: scale(1, 1);">
+                                    <li id="select-all" class="mdc-list-item" role="menuitem" tabindex="0">All</li>
+                                    <li class="mdc-list-divider" role="separator"></li>
+                                    <li id="select-read" class="mdc-list-item" role="menuitem" tabindex="1">Read</li>
+                                    <li class="mdc-list-divider" role="separator"></li>
+                                    <li id="select-none" class="mdc-list-item" role="menuitem" tabindex="2">None</li>
+                                </ul><!-- mdc-simple-menu__items -->
+                            </div>
+                        </div><!-- mdc-menu-anchor -->
+                        <a href="#" id="delete-email" class="material-icons mdc-toolbar__icon" aria-label="Delete" alt="Delete">delete</a>
+                        <a href="#" id="delete-all" class="material-icons mdc-toolbar__icon" aria-label="Delete" alt="Delete">delete</a>
+                        <a href="#" id="delete-read" class="material-icons mdc-toolbar__icon" aria-label="Delete" alt="Delete">delete</a>
+                        <a href="#" id="save-email" class="material-icons mdc-toolbar__icon" aria-label="Save" alt="Save">save</a>
+                        <a href="#" id="save-all" class="material-icons mdc-toolbar__icon" aria-label="Save" alt="Save">save</a>
+                        <a href="#" id="save-read" class="material-icons mdc-toolbar__icon" aria-label="Save" alt="Save">save</a>
+                        <a href="#" id="spam-email" class="material-icons mdc-toolbar__icon" aria-label="Bookmark this page" alt="Bookmark this page">feedback</a>
+                        <a href="#" id="spam-all" class="material-icons mdc-toolbar__icon" aria-label="Bookmark this page" alt="Bookmark this page">feedback</a>
+                        <a href="#" id="spam-read" class="material-icons mdc-toolbar__icon" aria-label="Bookmark this page" alt="Bookmark this page">feedback</a>
+                    </section>
+                </div>
+            </header>
+            <main class="mdc-layout-grid mdc-toolbar-fixed-adjust">
+                <div class="mdc-layout-grid__inner">
+                    <section class="primary mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                        <ul id="emails-list" class="mdc-list mdc-list--two-line msgs-list">
+                        </ul>
+                    </section>
+                </div>
+            </main><!-- mdc-layout-grid -->
+        </div><!-- content-container -->
+
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+        <script>window.mdc.autoInit();</script>
+    <script type="text/javascript" src="/main.min.js"></script></body>
+</html>
